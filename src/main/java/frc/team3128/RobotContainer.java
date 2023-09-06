@@ -31,7 +31,7 @@ import frc.team3128.subsystems.Leds;
 import frc.team3128.common.utility.NAR_Shuffleboard;
 import frc.team3128.subsystems.Swerve;
 import frc.team3128.subsystems.Vision;
-import frc.team3128.subsystems.Leds.Colors;
+import frc.team3128.Constants.LedConstants.Colors;
 
 import java.util.function.BooleanSupplier;
 
@@ -135,7 +135,6 @@ public class RobotContainer {
 
     public void init() {
         Vision.AUTO_ENABLED = false;
-        leds.setUnderglowLeds(Colors.AUTO);
     }
 
     private void initDashboard() {

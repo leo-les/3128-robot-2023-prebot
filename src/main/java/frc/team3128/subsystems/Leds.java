@@ -18,6 +18,8 @@ import com.ctre.phoenix.led.TwinkleOffAnimation.TwinkleOffPercent;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.team3128.Constants.LedConstants;
+import frc.team3128.Constants.LedConstants.Colors;;
+
 
 public class Leds extends SubsystemBase {
     private final CANdle m_candle = new CANdle(LedConstants.CANDLE_ID);
@@ -29,27 +31,6 @@ public class Leds extends SubsystemBase {
             instance = new Leds();
         }
         return instance;
-    }
-
-    public enum Colors {
-        OFF(0,0,0),
-        CONE(255,255,0),
-        CUBE(255,87,51),
-        HOLDING(255,255,255),
-
-        AUTO(255,0,0),
-        DRIVER(0,255,0);
-
-        private final int r;
-        private final int b;
-        private final int g;
-
-        Colors(int r, int g, int b) {
-            this.r = r;
-            this.g = b;
-            this.b = g;
-        }
-
     }
 
     public Leds() {
